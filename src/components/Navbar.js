@@ -40,8 +40,8 @@ class Navbar extends Component {
         <div className="appName">
         <Link to='/'>
         Homely
-        </Link></div>
-
+        </Link>
+        </div>
         <nav className="navigation">
           <ul className="siteNav">
             <li>

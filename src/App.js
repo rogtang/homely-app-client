@@ -14,22 +14,22 @@ class App extends React.Component {
     render() {
         return (
           <div className="App">
-            <Route exact path='/' component={ Navbar } />
+            <Navbar />
           <main className="App_main">
           <Switch>
             <Route exact path={'/'} component={LandingPage} />
             {/*create util for Public and Private Routes and import them */}
-            <Route path={'/login'} component={LoginPage} />
+            <Route exact path={'/login'} component={LoginPage} />
             <Route
-              path={'/register'}
+              exact path={'/register'}
               component={RegistrationPage}
             />
             <Route
-              path={'/posts'}
+              exact path={'/posts'}
               component={Dashboard}
             />
             <Route
-              path={'/posts/:postId'}
+              exact path={'/posts/1'}
               component={LocationItem}
             />
             <Route
@@ -37,7 +37,7 @@ class App extends React.Component {
               component={AddPost}
             />
             <Route
-              path={'/edit/:postId'}
+              exact path={'/edit/1'}
               component={EditPost}
             />
           </Switch>
