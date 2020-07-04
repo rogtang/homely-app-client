@@ -4,6 +4,7 @@ import LocationItem from "./LocationItem"
 
 class Dashboard extends Component {
   render() {
+    const {newHouse} = this.props
     return (
       <div>
         <main role="main">
@@ -12,14 +13,14 @@ class Dashboard extends Component {
       </header>
       <section>
         <header>
-            <h2>The White House</h2>
-            <p>1600 Pennsylvania Ave NW, Washington DC, 20500</p>
-            <p>Price: 1</p>
-            <p>Size: 5</p>
-            <p>Location: 3</p>
+            <h2>{newHouse.name}</h2>
+            <p>{newHouse.address}</p>
+            <p>Price: {newHouse.ratings.price}</p>
+            <p>Size: {newHouse.ratings.size}</p>
+            <p>Location: {newHouse.ratings.location}</p>
         </header>
         <p>Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.</p>
-        <a href="https://zillow.com/homes" target="_blank" rel="noopener noreferrer"> Link</a>
+        <a href={newHouse.url} target="_blank" rel="noopener noreferrer"> Link</a>
         <br/>
         <button>Edit</button>
         <button>Delete</button>
