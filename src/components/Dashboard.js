@@ -8,7 +8,7 @@ class Dashboard extends Component {
     return (
       <div>
         <main role="main">
-      <header role="banner">
+      <header className="dashboard-header">
         <h1>Homely Posts</h1>
       </header>
       <section>

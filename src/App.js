@@ -18,7 +18,7 @@ const newHouse =
       ratings: {
           price: 1,
           size: 5,
-          location: 3
+          location: 4
       }
       }
 

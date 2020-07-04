@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./LocationItem.css";
+import Rating from "./Rating";
 
 class LocationItem extends Component {
 
@@ -9,7 +10,7 @@ class LocationItem extends Component {
     return (
       <div>
         <main role="main">
-          <header>
+          <header className="location-item-header">
             <h1>{newHouse.name}</h1>
           </header>
           <section>
@@ -26,9 +27,9 @@ class LocationItem extends Component {
                 Link
               </a>
               <div className="post-ratings">
-                <p>Price: {newHouse.ratings.price}</p>
-                <p>Size: {newHouse.ratings.size}</p>
-                <p>Location: {newHouse.ratings.location}</p>
+                <p>Price: <Rating value={newHouse.ratings.price}/></p>
+                <p>Size: <Rating value={newHouse.ratings.size}/></p>
+                <p>Location: <Rating value={newHouse.ratings.location}/></p>
               </div>
               <button type="submit">Edit</button>
               <button type="submit">Cancel</button>
