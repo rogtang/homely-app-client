@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
-import LocationItem from "./LocationItem"
+import LocationItem from "./LocationItem";
+import Rating from "./Rating";
 
 class Dashboard extends Component {
   render() {
@@ -12,15 +14,13 @@ class Dashboard extends Component {
         <h1>Homely Posts</h1>
       </header>
       <section>
-        <header>
-            <h2>{newHouse.name}</h2>
+        <div>
+            <h2><Link to='/posts/1'>{newHouse.name}</Link></h2>
             <p>{newHouse.address}</p>
-            <p>Price: {newHouse.ratings.price}</p>
-            <p>Size: {newHouse.ratings.size}</p>
-            <p>Location: {newHouse.ratings.location}</p>
-        </header>
-        <p>Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.</p>
-        <a href={newHouse.url} target="_blank" rel="noopener noreferrer"> Link</a>
+            <p>Price: <Rating value={newHouse.ratings.price}/></p>
+            <p>Size: <Rating value={newHouse.ratings.size}/></p>
+            <p>Location: <Rating value={newHouse.ratings.location}/></p>
+        </div>
         <br/>
         <button>Edit</button>
         <button>Delete</button>
