@@ -26,16 +26,16 @@ class Dashboard extends Component {
         <button>Delete</button>
       </section>
       <section>
-        <header>
+        <div>
             <h2>The Palace in Auburn Hills</h2>
             <p>6 Championship Dr, Auburn Hills, MI 48326</p>
-        </header>
+        </div>
       </section>
       <section>
-        <header>
+        <div>
             <h2>White Picket Fence</h2>
             <p>111 American Dream Lane, South Pasadena, CA 91030</p>
-        </header>
+        </div>
       </section>
     </main>
         <footer>(c) 2020</footer>

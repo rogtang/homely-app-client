@@ -36,7 +36,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <header>
+      <header className="nav-header">
         <div className="appName">
         <Link to='/'>
         Homely

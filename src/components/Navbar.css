@@ -25,7 +25,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  z-index: 10;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -53,7 +52,7 @@ nav {
   z-index: 0;
 }
 
-header {
+.nav-header {
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
@@ -83,7 +82,7 @@ p + p {
     padding: 5px 5px 0 5px;
   }
 
-  header {
+  .nav-header {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
