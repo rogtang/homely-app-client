@@ -6,10 +6,10 @@ class AddPost extends Component {
     return (
       <div>
         <main role="main">
-      <header>
-        <h1>New Location</h1>
+      <header className="add-post-header">
+        <h1>Add Location</h1>
       </header>
-      <section>
+      <section className="add-post-section">
         <form id="add-post">
           <div className="form-section">
             <label htmlFor="nickname">Add a nickname to help you remember this place:</label>

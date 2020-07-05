@@ -73,3 +73,13 @@
   button {
       margin-right: 10px;
   }
+
+  .edit-post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #edit-post {
+    margin: 0 auto
+  }

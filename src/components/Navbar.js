@@ -9,6 +9,10 @@ class Navbar extends Component {
         return (
             <div className='Header__logged-in'>
               <Link
+                to='/addpost'>
+                Add Location
+              </Link>
+              <Link
                 onClick={this.handleLogoutClick}
                 to='/'>
                 Logout

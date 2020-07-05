@@ -10,7 +10,7 @@ class EditPost extends Component {
       <header>
         <h1>Edit Location Details</h1>
       </header>
-      <section>
+      <section className="edit-post-section">
         <form id="edit-post">
           <div className="form-section">
             <label htmlFor="nickname">Edit nickname:</label>

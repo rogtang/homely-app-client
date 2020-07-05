@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./LocationItem.css";
 import Rating from "./Rating";
 
+
 class LocationItem extends Component {
 
   render() {
