@@ -4,10 +4,15 @@ import AuthApiService from '../services/auth-api-service'
 
 class RegistrationPage extends Component {
   static defaultProps = {
-    onRegistrationSuccess: () => {}
+    handleRegistrationSuccess: () => {}
   }
 
   state = { error: null }
+
+  handleRegistrationSuccess = user => {
+    const { history } = this.props
+    history.push('/login')
+  }
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -21,7 +26,7 @@ class RegistrationPage extends Component {
     .then(user => {
       username.value = ''
       password.value = ''
-      this.props.onRegistrationSuccess()
+      this.handleRegistrationSuccess()
       })
      .catch(res => {
        this.setState({ error: res.error })

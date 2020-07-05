@@ -1,6 +1,6 @@
 .login{
     width: 400px;
-    margin: 20px auto;
+    margin: 10em auto;
   }
   
   .login__form {
@@ -21,6 +21,7 @@
   
   .login__form__controls {
     margin-top: 15px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
   }
