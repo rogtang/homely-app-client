@@ -1,6 +1,6 @@
-.register{
+div.register{
     width: 400px;
-    margin: 20px auto;
+    margin-top: 10em
   }
   
   .register__form {
@@ -21,10 +21,26 @@
   
   .register__form__controls {
     margin-top: 15px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
   }
   
   .register__form__btn {
     margin-top: 15px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  label {
+    text-align: left;
+    margin-left: 1em;
+  }
+
+  @media screen and (min-width: 450px) {
+    .register{
+      width: 500px;
+      margin: 20px auto;
+    }
   }

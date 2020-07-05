@@ -27,3 +27,16 @@ const newHouse = [
         }
         }
 ]
+
+//conditionally render screens
+render() {
+    const page = this.state.showAddPost
+          ? <AddPost />
+          : <Dashboard posts={this.state.posts}/>;
+
+    return (
+      <div className="App">
+        { page }
+      </div>
+    );
+  }

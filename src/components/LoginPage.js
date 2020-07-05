@@ -10,7 +10,7 @@ class LoginPage extends Component {
           <form>
             <h2>Login</h2>
             <div className="login__form__credentials">
-              <input type="text" placeholder="Username" name="username" id="username"/>
+              <input type="text" placeholder="Email address" name="username" id="username"/>
               <input type="password" placeholder="Password" name="password" id="password"/>
             </div>
             <div className="login__form__controls">

@@ -8,6 +8,8 @@ import RegistrationPage from './components/RegistrationPage';
 import LocationItem from './components/LocationItem';
 import AddPost from './components/AddPost';
 import EditPost from './components/EditPost';
+import PrivateRoute from './utils/PrivateRoute'
+import PublicOnlyRoute from './utils/PublicOnlyRoute'
 
 const newHouse = 
   {
@@ -22,6 +24,17 @@ const newHouse =
       }
       }
 
+  const anotherHouse = 
+  {
+      name: "the White House",
+      address: "1600 Pennslyvania Ave, Washington DC, 20500",
+      userNotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
+      url: "https://zillow.com/homes",
+      price_rating: 1,
+      size_rating: 5,
+      location_rating: 4
+      }
+
 
 class App extends React.Component {
     render() {
@@ -31,7 +44,6 @@ class App extends React.Component {
           <main className="App_main">
           <Switch>
             <Route exact path={'/'} component={LandingPage} />
-            {/*create util for Public and Private Routes and import them */}
             <Route exact path={'/login'} component={LoginPage} />
             <Route
               exact path={'/register'}
