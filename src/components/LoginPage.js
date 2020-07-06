@@ -16,12 +16,13 @@ class LoginPage extends Component {
   }
 
   handleLoginSuccess = () => {
+    //or try: window.location = '/posts'
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/posts'
     history.push(destination)
   }
 
-  state = { error: null }
+//Add onChange methods for username and password to update state below
 
 
 
@@ -61,7 +62,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="login">
-        <h1>Welcome back</h1>
+        <h1>Great To See You Again</h1>
         <div className="login__form">
         <form
           className='LoginForm'

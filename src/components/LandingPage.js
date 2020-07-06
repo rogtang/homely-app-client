@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
   render() {
@@ -22,12 +23,6 @@ class LandingPage extends Component {
               Homely help out and keep your search organized so you can start
               focusing on moving into your dream place.
             </p>
-            <a className="signup-form" href="/signup">
-              Sign Up
-            </a>
-            <a className="login-form" href="/login">
-              Log In
-            </a>
           </section>
           <section>
             <header>
@@ -45,51 +40,9 @@ class LandingPage extends Component {
                 stack up to each other.
               </strong>
             </p>
-          </section>
-          <section>
-            <header>
-              <h3>Make Your Search Easier</h3>
-            </header>
-            <form className="signup-form">
-              <div>
-                <label htmlFor="first-name">First name</label>
-                <input
-                  placeholder="First Name"
-                  type="text"
-                  name="first-name"
-                  id="first-name"
-                />
-              </div>
-              <div>
-                <label htmlFor="last-name">Last name</label>
-                <input
-                  type="text"
-                  name="last-name"
-                  id="last-name"
-                  placeholder="Last Name"
-                />
-              </div>
-              <div>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" id="username" required />
-              </div>
-              <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" required />
-              </div>
-              <button type="submit">Sign Up</button>
-            </form>
-            <form className="login-form">
-              <div>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" id="username" required />
-              </div>
-              <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" required />
-              </div>
-              <button type="submit">Log In</button>
-            </form>
+            <h3>Make Your Search Easier</h3>
+            <Link to="/login">Log in</Link> 
+            <Link to="/register">Register</Link>
           </section>
         </main>
         <footer>(c) 2020</footer>

@@ -4,12 +4,15 @@ import AuthApiService from '../services/auth-api-service'
 
 class RegistrationPage extends Component {
   static defaultProps = {
-    handleRegistrationSuccess: () => {}
-  }
+    history: {
+        push: () => { }
+    }
+}
 
-  state = { error: null }
+  //Add onChange methods for username and password to update state below
 
   handleRegistrationSuccess = user => {
+    //or try: window.location = '/login'
     const { history } = this.props
     history.push('/login')
   }
