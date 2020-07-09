@@ -15,7 +15,7 @@ const newHouse =
   {
       name: "the White House",
       address: "1600 Pennslyvania Ave, Washington DC, 20500",
-      userNotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
+      usernotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
       url: "https://zillow.com/homes",
       ratings: {
           price: 1,
@@ -28,7 +28,7 @@ const newHouse =
   {
       name: "the White House",
       address: "1600 Pennslyvania Ave, Washington DC, 20500",
-      userNotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
+      usernotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
       url: "https://zillow.com/homes",
       price_rating: 1,
       size_rating: 5,

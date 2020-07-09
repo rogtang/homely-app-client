@@ -44,7 +44,7 @@ render() {
   return <>
     <nav className='Header'>
       <h1>
-        <Link to='/'>
+        <Link to='/posts'>
           Homely
         </Link>
       </h1>

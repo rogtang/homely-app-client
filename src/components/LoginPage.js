@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import './LoginPage.css';
-import AuthApiService from '../services/auth-api-service'
-import TokenService from '../services/token-service'
+import AuthApiService from '../services/auth-api-service';
+import TokenService from '../services/token-service';
+import ValidationError from './validation-error'
 
 class LoginPage extends Component {
   static defaultProps = {
     handleLoginSuccess: () => {}
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: {
+        value: '',
+        touched: false
+      },
+      password: {
+        value: '',
+        touched: false
+      },
+    }
   }
 
   static defaultProps = {
@@ -22,7 +37,23 @@ class LoginPage extends Component {
     history.push(destination)
   }
 
-//Add onChange methods for username and password to update state below
+updateUsername(username) {
+  this.setState({
+    username: {
+      value: username,
+      touched: true
+    }
+  })
+}
+
+updatePassword(pw) {
+  this.setState({
+    password: {
+      value: pw,
+      touched: true
+    }
+  })
+}
 
 
 
@@ -59,6 +90,22 @@ class LoginPage extends Component {
          })
      }
 
+  validateUsername() {
+      const username = this.state.username.value.trim();
+      if (username.length === 0) {
+          return 'Username/email is required';
+      } else if (username.length < 5) {
+          return 'Username must be at least 5 characters long';
+      }
+  }
+
+  validatePassword() {
+      const password = this.state.password.value.trim();
+      if (password.length < 5 || password.length > 72) {
+          return 'Password must be between 5 and 72 characters long';
+      } 
+  }
+
   render() {
     return (
       <div className="login">
@@ -71,9 +118,13 @@ class LoginPage extends Component {
             <h2>Login</h2>
             <div className="login__form__credentials">
             <label htmlFor='LoginForm__username'>Enter your email/username:</label>
-              <input type="text" placeholder="Email address" name="username" id="LoginForm__username" required/>
+              <input type="text" placeholder="Email address" name="username" id="LoginForm__username" 
+              onChange={e => this.updateUsername(e.target.value)} required/> 
+              {this.state.username.touched && (<ValidationError message={this.validateUsername()} />)}
               <label htmlFor='LoginForm__password'>Enter your password:</label>
-              <input type="password" placeholder="Password" name="password" id="password" required/>
+              <input type="password" placeholder="Password" name="password" id="password"
+              onChange={e => this.updatePassword(e.target.value)} required/>
+              {this.state.password.touched && (<ValidationError message={this.validatePassword()} />)}
             </div>
             <div className="login__form__controls">
               <input type="submit" value="Sign In" className="login__form__btn"/>

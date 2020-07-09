@@ -18,7 +18,7 @@ class LocationItem extends Component {
             <div className="location-detail">
               <p>{newHouse.address}</p>
               <p>
-                {newHouse.userNotes}
+                {newHouse.usernotes}
               </p>
               <a
                 href={newHouse.url}

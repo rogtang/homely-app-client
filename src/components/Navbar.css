@@ -49,6 +49,14 @@
   border-radius: 15px;
 }
 
+.Header__logged-in a:first-child {
+  background: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 450px) {
   .Header {
     align-items: baseline;
@@ -56,6 +64,16 @@
 
   .Header h1 {
     font-size: 26pt;
+  }
+
+  .Header__not-logged-in a:last-child {
+    margin-right: 20px;
+    margin-left: 20px
+  }
+  
+  .Header__logged-in a {
+    margin-right: 20px;
+    margin-left: 20px
   }
 }
 

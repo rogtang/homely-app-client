@@ -40,3 +40,12 @@ render() {
       </div>
     );
   }
+
+//Taken from noteful, notelistmain component. Try this to get posts for specific user then set state with getPostsFromUsers
+  const getPostsFromUsers = (posts=[], user_id) => (
+  (!user_id)
+    ? posts
+    : posts.filter(post => post.user_id.toString() === user_id.toString())
+
+  const postsFromUsers = getPostsFromUsers(posts, user_id)
+  then postFromUsers.map

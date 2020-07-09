@@ -22,7 +22,7 @@ class EditPost extends Component {
           </div>
           <div className="form-section">
             <label htmlFor="notes">What did you think of the place?</label>
-            <textarea name="notes" rows="15" value={newHouse.userNotes}></textarea>
+            <textarea name="notes" rows="15" value={newHouse.usernotes}></textarea>
           </div>
           <div className="form-section">
             <label htmlFor="url">Link to listing page (optional):</label>
