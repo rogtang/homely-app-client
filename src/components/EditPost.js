@@ -174,7 +174,6 @@ class EditPost extends Component {
         </form>
       </section>
     </main>
-        <footer>(c) 2020</footer>
       </div>
     );
   }

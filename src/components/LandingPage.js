@@ -45,7 +45,6 @@ class LandingPage extends Component {
             <Link to="/register">Register</Link>
           </section>
         </main>
-        <footer>(c) 2020</footer>
       </div>
     );
   }

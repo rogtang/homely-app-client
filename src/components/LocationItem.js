@@ -3,9 +3,8 @@ import "./LocationItem.css";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
 import PostsContext from '../contexts/PostsContext';
-import config from '../config';
-import TokenService from '../services/token-service';
 import PostApiService from '../services/post-api-service';
+import { withRouter } from "react-router";
 
 
 class LocationItem extends Component {
@@ -41,6 +40,7 @@ handleDelete = e => {
     window.location.assign('/posts');
 }
 
+//moved Cancel button to LocationDetail
 handleClickCancel = () => {
   this.props.history.push('/posts')
 }
@@ -64,7 +64,7 @@ handleClickCancel = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Link
+                {url}
               </a>
               <div className="post-ratings">
                 <div>Price: <Rating value={price_rating}/></div>
@@ -73,7 +73,7 @@ handleClickCancel = () => {
               </div>
               <Link to={`/edit/${id}`}>
               <button type="button" id={id}>Edit</button></Link>
-              <button type="button" onClick={this.handleClickCancel}>Cancel</button>
+              
               <button id={id} type="button" onClick={this.handleDelete}>Delete</button>
             </div>
           </section>
@@ -87,4 +87,4 @@ LocationItem.defaultProps = {
     newHouse: []
   };
 
-export default LocationItem;
+export default withRouter(LocationItem);

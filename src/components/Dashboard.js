@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./Dashboard.css";
 import LocationItem from "./LocationItem";
-import Rating from "./Rating";
 import PostsContext from '../contexts/PostsContext';
 import {getPostsFromUsers} from '../App';
 
@@ -20,7 +18,6 @@ class Dashboard extends Component {
     const { user_id } = this.props.match.params
     const { posts=[] } = this.context
     const postsFromUser = getPostsFromUsers(posts, user_id)
-    console.log(user_id)
 
     return (
       <section className='PostsMain'>
@@ -28,8 +25,12 @@ class Dashboard extends Component {
       <ul className='Posts__list' aria-live='polite'>
       {posts.map(post =>
             <LocationItem
-              key={post.id}
-              {...post}
+            key={post.id}
+            id={post.id}
+            name={post.name}
+            price_rating={post.price_rating}
+            size_rating={post.size_rating}
+            location_rating={post.location_rating}
             />
           )}
       </ul>

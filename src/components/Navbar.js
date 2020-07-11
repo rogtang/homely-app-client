@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import TokenService from '../services/token-service'
 import './Navbar.css'
 

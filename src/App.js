@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 import LoginPage from './components/LoginPage';
 import Dashboard from './components/Dashboard';
 import RegistrationPage from './components/RegistrationPage';
-import LocationItem from './components/LocationItem';
+import LocationDetail from './components/LocationDetail';
 import AddPost from './components/AddPost';
 import EditPost from './components/EditPost';
 import PostApiService from './services/post-api-service';
@@ -37,6 +37,8 @@ import PostsContext from './contexts/PostsContext';
       location_rating: 4
       }
 */
+export const findPost = (posts=[], post_id) =>
+  posts.find(post => post.id === post_id)
 
 export const getPostsFromUsers = (posts=[], user_id) => (
         (!user_id)
@@ -51,11 +53,17 @@ class App extends React.Component {
     error: null,
   };
 
-  
-  setPosts = posts => {
+  /*setPosts = posts => {
     const postsFromUser = getPostsFromUsers(posts, this.state.posts.user_id)
     this.setState({
       posts: postsFromUser,
+      error: null,
+    })
+  }*/
+  
+  setPosts = posts => {
+    this.setState({
+      posts,
       error: null,
     })
   }
@@ -120,7 +128,7 @@ componentDidMount() {
             />
             <PrivateRoute
               exact path={'/posts/:post_id'}
-              component={LocationItem}
+              component={LocationDetail}
             />
             
             <PrivateRoute
