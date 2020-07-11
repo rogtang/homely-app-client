@@ -49,3 +49,48 @@ render() {
 
   const postsFromUsers = getPostsFromUsers(posts, user_id)
   then postFromUsers.map
+
+
+  //Maybe create a Posts component that is rendered directly in Dashboard?
+
+  render() {
+    return (
+      <Posts />
+    )
+  }
+
+
+
+
+  <div>
+        <main role="main">
+      <header className="dashboard-header">
+        <h1>Homely Posts</h1>
+      </header>
+      <section>
+        <div>
+            <h2><Link to='/posts/1'>{newHouse.name}</Link></h2>
+            <div>{newHouse.address}</div>
+            <div>Price: <Rating value={newHouse.ratings.price}/></div>
+            <div>Size: <Rating value={newHouse.ratings.size}/></div>
+            <div>Location: <Rating value={newHouse.ratings.location}/></div>
+        </div>
+        <br/>
+        <button>Edit</button>
+        <button>Delete</button>
+      </section>
+      <section>
+        <div>
+            <h2>The Palace in Auburn Hills</h2>
+            <div>6 Championship Dr, Auburn Hills, MI 48326</div>
+        </div>
+      </section>
+      <section>
+        <div>
+            <h2>White Picket Fence</h2>
+            <div>111 American Dream Lane, South Pasadena, CA 91030</div>
+        </div>
+      </section>
+    </main>
+        <footer>(c) 2020</footer>
+      </div>

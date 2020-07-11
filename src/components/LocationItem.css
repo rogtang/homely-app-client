@@ -32,7 +32,7 @@ header {
 
 section {
   min-height: 200px;
-  padding: 30px 15px;
+  padding: 30px 5px;
   background-color: #bbb;
 }
 
@@ -76,4 +76,5 @@ label {
     flex-direction: column;
     justify-content: center;
   }
+  
 }

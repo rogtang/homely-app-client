@@ -31,10 +31,10 @@ class LoginPage extends Component {
   }
 
   handleLoginSuccess = () => {
-    //or try: window.location = '/posts'
-    const { location, history } = this.props
+    window.location.assign('/posts');
+    /*const { location, history } = this.props
     const destination = (location.state || {}).from || '/posts'
-    history.push(destination)
+    history.push(destination)*/
   }
 
 updateUsername(username) {

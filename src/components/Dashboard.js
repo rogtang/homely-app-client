@@ -3,43 +3,39 @@ import { Link } from "react-router-dom";
 import "./Dashboard.css";
 import LocationItem from "./LocationItem";
 import Rating from "./Rating";
+import PostsContext from '../contexts/PostsContext';
+import {getPostsFromUsers} from '../App';
 
 class Dashboard extends Component {
+  static contextType = PostsContext;
+  static defaultProps = {
+    match: {
+      params: {}
+    },
+    posts:[]
+  }
+  
+
   render() {
-    const {newHouse} = this.props
+    const { user_id } = this.props.match.params
+    const { posts=[] } = this.context
+    const postsFromUser = getPostsFromUsers(posts, user_id)
+    console.log(user_id)
+
     return (
-      <div>
-        <main role="main">
-      <header className="dashboard-header">
-        <h1>Homely Posts</h1>
-      </header>
-      <section>
-        <div>
-            <h2><Link to='/posts/1'>{newHouse.name}</Link></h2>
-            <p>{newHouse.address}</p>
-            <p>Price: <Rating value={newHouse.ratings.price}/></p>
-            <p>Size: <Rating value={newHouse.ratings.size}/></p>
-            <p>Location: <Rating value={newHouse.ratings.location}/></p>
-        </div>
-        <br/>
-        <button>Edit</button>
-        <button>Delete</button>
-      </section>
-      <section>
-        <div>
-            <h2>The Palace in Auburn Hills</h2>
-            <p>6 Championship Dr, Auburn Hills, MI 48326</p>
-        </div>
-      </section>
-      <section>
-        <div>
-            <h2>White Picket Fence</h2>
-            <p>111 American Dream Lane, South Pasadena, CA 91030</p>
-        </div>
-      </section>
-    </main>
-        <footer>(c) 2020</footer>
-      </div>
+      <section className='PostsMain'>
+      <h1>Homely Posts</h1>
+      <ul className='Posts__list' aria-live='polite'>
+      {posts.map(post =>
+            <LocationItem
+              key={post.id}
+              {...post}
+            />
+          )}
+      </ul>
+      
+    </section>
+
     );
   }
 }

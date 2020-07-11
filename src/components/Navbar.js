@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import TokenService from '../services/token-service'
 import './Navbar.css'
 
@@ -7,20 +7,21 @@ class Navbar extends Component {
 
 handleLogoutClick = () => {
   TokenService.clearAuthToken();
+  window.location.assign('/');
 }
 
 renderLogoutLink() {
   return (
     <div className='Header__logged-in'>
-      <Link
+      <NavLink
         to='/addpost'>
         Add Location
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         onClick={this.handleLogoutClick}
         to='/'>
         Logout
-      </Link>
+      </NavLink>
     </div>
   )
 }
@@ -28,14 +29,14 @@ renderLogoutLink() {
 renderLoginLink() {
   return (
     <div className='Header__not-logged-in'>
-      <Link
+      <NavLink
         to='/login'>
         Log in
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to='/register'>
         Register
-      </Link>
+      </NavLink>
     </div>
   )
 }
@@ -44,9 +45,9 @@ render() {
   return <>
     <nav className='Header'>
       <h1>
-        <Link to='/posts'>
+        <NavLink to='/posts'>
           Homely
-        </Link>
+        </NavLink>
       </h1>
       <span className='Header__tagline--wide'>Your house hunting assistant.</span>
       {TokenService.hasAuthToken()

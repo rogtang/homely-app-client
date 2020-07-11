@@ -2,8 +2,8 @@ import TokenService from './token-service'
 import config from '../config'
 
 const PostApiService = {
-  getRecords() {
-    return fetch(`${config.API_ENDPOINT}/records`, {
+  getPosts() {
+    return fetch(`${config.API_ENDPOINT}/posts`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -64,33 +64,9 @@ const PostApiService = {
           : res.json()
       )
   },
-  postUserRecord(recordId, location, time, onset, intensity, trigger, symptom, treatment, comment) {
-    return fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserId('userId')}/records`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-      body: JSON.stringify({
-        record_id: recordId,
-        location,
-        time,
-        onset,
-        intensity,
-        trigger,
-        symptom,
-        treatment,
-        comment
-      }),
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-  },
-  deleteRecord(recordId, cb) {
-    fetch(`${config.API_ENDPOINT}/records/${recordId}`, {
+
+  deletePost(post_id, cb) {
+    fetch(`${config.API_ENDPOINT}/posts/${post_id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
@@ -104,46 +80,11 @@ const PostApiService = {
         return res.json()
       })
       .then(data => {
-        cb(recordId)
+        cb(post_id)
       })
       .catch(error => {
         console.error(error)
       })
-  },
-  deleteUserRecord(recordId, cb) {
-    fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserId('userId')}/records/${recordId}`, {
-      method: 'DELETE',
-      headers: {
-        'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-    .then(res => {
-      if (!res.ok) {
-        return res.json().then(error => Promise.reject(error))
-      }
-      return res.json()
-    })
-      .then(data => {
-        cb(recordId)
-        window.location.reload()
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  },
-  getUserStats() {
-    return fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserId('userId')}/stats`, {
-      method: 'GET',
-      headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
   }
 }
 
