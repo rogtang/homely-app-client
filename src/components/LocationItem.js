@@ -35,15 +35,15 @@ componentDidMount() {
 handleDelete = e => {
   e.preventDefault()
   const { id } = e.target
-  const postId = Number(id)
-  PostApiService.deletePost(postId, this.postToDelete(postId))
+  //const postId = Number(id)
+  PostApiService.deletePost(id, this.postToDelete(id))
     window.location.assign('/posts');
 }
 
-//moved Cancel button to LocationDetail
+/*moved Cancel button to LocationDetail
 handleClickCancel = () => {
   this.props.history.push('/posts')
-}
+}*/
 
   render() {
     const { name, id, url, address, usernotes, price_rating, size_rating, location_rating } = this.props

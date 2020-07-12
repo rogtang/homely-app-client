@@ -69,6 +69,7 @@ handleClickCancel = () => {
             <label htmlFor="url">Link to listing page (optional):</label>
             <input id="url" type="url" name="url" placeholder="https://zillow.com/homes"/>
           </div>
+          <div><strong>Add a rating between 1 - 5:</strong></div><br/>
           <div className="ratings-container form-section">
             <label htmlFor="price_rating">Price (e.g. how well does this place fit within your budget?):</label>
             <input id="price_rating" type="number" name="price_rating" min="1" max="5" placeholder="1" required />

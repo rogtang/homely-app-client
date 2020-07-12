@@ -74,12 +74,6 @@ class App extends React.Component {
   })
   }
 
-componentDidMount() {
-    PostApiService.getPosts()
-        .then(this.setPosts)
-        .catch(error => this.setState({ error }))
-}
-
   updatePost = updatedPost => {
     const newPost = this.state.posts.map(post => 
       (post.id === updatedPost.id) ? updatedPost: post )
@@ -88,21 +82,27 @@ componentDidMount() {
     })
   }
 
-  deletePost = postId => {
+  /*deletePost = postId => {
     const newPosts = this.state.posts.filter(post =>
       post.id !== postId
     )
     this.setState({
       posts: newPosts
     })
-  }
+  }*/
+
+componentDidMount() {
+    PostApiService.getPosts()
+        .then(this.setPosts)
+        .catch(error => this.setState({ error }))
+}
+
 
     render() {
       const value = {
         posts: this.state.posts,
         addPost: this.addPost,
         deletePost: this.deletePost,
-        addUser: this.addUser,
         updatePost: this.updatePost
       }
 

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+
 * {
     box-sizing: border-box;
   }
@@ -5,10 +9,11 @@
   body {
     font-family: "Open Sans",
     sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #444;
     text-align: center;
     line-height: 1.5;
+    min-width: 100%;
   }
   
   nav,
@@ -28,7 +33,15 @@
   
   header {
     padding: 45px 15px;
+    font-family: 'neuton';
+    font-size: 2em
   }
+
+  .landing-page {
+    font-family: 'Crimson Text', serif; 
+    font-size: 1.2em
+  }
+
   
   section {
     min-height: 200px;
@@ -80,3 +93,23 @@
     margin-top: 15px;
   }
   
+
+  @media screen and (min-width: 450px) {
+
+    .container {
+      display: flex;
+    }
+
+    p.landing-page.one {
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      margin-left: 20px;
+    }
+
+    .two {
+      justify-content: flex-start;
+      padding: 40px;
+      margin-left: 20px;
+    }
+  }

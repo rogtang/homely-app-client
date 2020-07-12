@@ -1,77 +1,99 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Open Sans",
-    sans-serif;
-    font-size: 20px;
-    color: #444;
-    text-align: center;
-    line-height: 1.5;
-    min-width: 320px;
-  }
-  
-  nav,
-  footer {
-    padding: 1% 0;
-    background-color: #aaa;
-  }
-  
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  
-  header {
-    padding: 45px 15px;
-  }
-  
-  section {
-    min-height: 200px;
-    padding: 30px 15px;
-    background-color: #bbb;
-  }
-  
-  section:nth-child(even) {
-    background-color: #ddd;
-  }
-  
-  p {
-    margin: 0 auto;
-    max-width: 650px;
-  }
-  
-  p + p {
-    margin-top: 15px;
-  }
-  
-  form {
-    text-align: left;
-  }
-  
-  input, textarea {
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  input[type="number"] {
-    width: 50px;
-  }
-  
-  label {
-    display: block;
-  }
-  
-  .form-section {
-    margin-bottom: 30px;
-  }
+  box-sizing: border-box;
+}
 
-  button {
-      margin-right: 10px;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+  min-width: 320px;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header {
+  padding: 45px 15px;
+}
+
+section {
+  min-height: 200px;
+  padding: 30px 15px;
+  background-color: #bbb;
+}
+
+section:nth-child(even) {
+  background-color: #ddd;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+p + p {
+  margin-top: 15px;
+}
+
+form {
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+label {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.add-post-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#add-post {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .add-post-header {
+    flex-direction: column;
+    justify-content: center;
   }
 
   .add-post-section {
@@ -79,25 +101,8 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   #add-post {
-    margin: 0 auto
+    margin: 0 auto;
   }
-
-  @media only screen and (min-width: 768px) {
-    .add-post-header {
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .add-post-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    #add-post {
-      margin: 0 auto
-    }
-
-  }
+}

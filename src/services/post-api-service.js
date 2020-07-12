@@ -14,33 +14,7 @@ const PostApiService = {
           : res.json()
       )
   },
-  getUserRecords() {
-    return fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserId('user_id')}/records`, {
-      headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-            .catch(error => {
-        console.error(error)
-      })
-  },
-  getRecord(recordId) {
-    return fetch(`${config.API_ENDPOINT}/records/${recordId}`, {
-      headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
-  },
+
   postPost(name, url, address, usernotes, price_rating, size_rating, location_rating) {
     return fetch(`${config.API_ENDPOINT}/posts`, {
       method: 'POST',
