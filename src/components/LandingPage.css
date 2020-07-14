@@ -43,11 +43,12 @@
   }
 
   .landing-intro {
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(250, 239, 210);
   }
 
   .landing-detail {
-    background-color: rgb(250, 239, 210);
+
+    background-color: lightgoldenrodyellow;
   }
   
   .one, .two {

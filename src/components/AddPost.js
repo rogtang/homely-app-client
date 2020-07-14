@@ -49,7 +49,7 @@ handleClickCancel = () => {
       <div>
         <main role="main">
       <header className="add-post-header">
-        <h1>Add Location</h1>
+        <h1 className='add-location-header'>Add Location</h1>
       </header>
       <section className="add-post-section">
         <form id="add-post" className='add-post-form' onSubmit={this.handleSubmit}>

@@ -17,9 +17,12 @@ textarea {
   font-size: 100%;
 }
 
-
 header {
   padding: 45px 15px;
+}
+
+.add-location-header {
+  font-size: 54px;
 }
 
 p {
@@ -61,6 +64,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 5em;
+  padding: 20px;
 }
 
 #add-post {
