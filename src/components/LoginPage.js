@@ -86,7 +86,8 @@ updatePassword(pw) {
            this.handleLoginSuccess()
          })
          .catch(res => {
-           this.setState({ error: res.error })
+           this.setState({ error: res.error });
+           alert('Sorry, email or password was not found. Please try again.')
          })
      }
 

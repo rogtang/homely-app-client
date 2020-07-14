@@ -1,30 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap");
 
 .Header {
   height: 40px;
   display: flex;
   align-items: normal;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.747);
 }
 
-.Header h1 {
+.header_link {
   margin: 0;
   margin-left: 20px;
+  font-family: "neuton";
 }
 
 .Header a {
-  color: #444;
+  color: white;
   text-decoration: none;
 }
 
 .Header__tagline--wide {
   opacity: 0.75;
-  margin-left: 3em;
+  display: none;
 }
 
 .Header__tagline--narrow {
   opacity: 0.85;
-  display: block;
   text-align: center;
   display: none;
   margin-top: 10px;
@@ -46,7 +48,10 @@
 }
 
 .Header__logged-in {
-  font-size: 0.7em
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .Header__logged-in a {
@@ -63,35 +68,56 @@
 }
 
 @media screen and (min-width: 450px) {
-  .Header {
-    align-items: baseline;
-  }
-
   .Header h1 {
-    font-size: 26pt;
+    font-size: 22pt;
   }
 
   .Header__not-logged-in a:last-child {
     margin-right: 20px;
-    margin-left: 20px
+    margin-left: 20px;
   }
 
   .Header__logged-in {
-    font-size: 1.1em
+    font-size: 1.1em;
   }
-  
+
   .Header__logged-in a {
     margin-right: 20px;
   }
-  
 }
 
 @media screen and (max-width: 490px) {
   .Header__tagline--wide {
     display: none;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    height: 55px;
+  }
+
+  .header_link {
+    padding-top: 0.2em;
+  }
+
+  .Header__not-logged-in a:last-child {
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Header {
+    height: 60px;
+  }
+
+  .header_link {
+    padding-top: 0.4em;
+  }
 
   .Header__tagline--narrow {
-    display: inherit;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    color: red;
   }
 }

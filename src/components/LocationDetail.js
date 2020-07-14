@@ -3,6 +3,7 @@ import PostsContext from "../contexts/PostsContext";
 import { findPost } from "../App";
 import LocationItem from "./LocationItem";
 import { withRouter } from "react-router";
+import './LocationDetail.css'
 
 class LocationDetail extends Component {
   static contextType = PostsContext;

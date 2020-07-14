@@ -44,7 +44,7 @@ renderLoginLink() {
 render() {
   return <>
     <nav className='Header'>
-      <h1>
+      <h1 className="header_link">
         <NavLink to='/posts'>
           Homely
         </NavLink>

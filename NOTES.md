@@ -10,57 +10,55 @@ AddPost: the form to add new posts
 EditPost: the form to edit posts
 Rating: Displays the ratings for each post
 
+MOVE ALL CSS INTO APP.CSS?
 
 const newHouse = [
-    {
-        name: 'the White House',
-        address: '1600 Pennslyvania Ave, Washington DC, 20500',
-        userNotes: 'Lovely exteriors, spatial front yard, but kitchens need
-                renovation. Plenty of natural light. Spacious living areas but
-                air conditioning will need to be replaced. Cabinets are
-                outdated. Furniture will not be included.',
-        url: 'https://zillow.com/homes',
-        ratings: {
-            price: 1,
-            size: 5,
-            location: 3
-        }
-        }
+{
+name: 'the White House',
+address: '1600 Pennslyvania Ave, Washington DC, 20500',
+userNotes: 'Lovely exteriors, spatial front yard, but kitchens need
+renovation. Plenty of natural light. Spacious living areas but
+air conditioning will need to be replaced. Cabinets are
+outdated. Furniture will not be included.',
+url: 'https://zillow.com/homes',
+ratings: {
+price: 1,
+size: 5,
+location: 3
+}
+}
 ]
 
 //conditionally render screens
 render() {
-    const page = this.state.showAddPost
-          ? <AddPost />
-          : <Dashboard posts={this.state.posts}/>;
+const page = this.state.showAddPost
+? <AddPost />
+: <Dashboard posts={this.state.posts}/>;
 
     return (
       <div className="App">
         { page }
       </div>
     );
-  }
+
+}
 
 //Taken from noteful, notelistmain component. Try this to get posts for specific user then set state with getPostsFromUsers
-  const getPostsFromUsers = (posts=[], user_id) => (
-  (!user_id)
-    ? posts
-    : posts.filter(post => post.user_id.toString() === user_id.toString())
+const getPostsFromUsers = (posts=[], user_id) => (
+(!user_id)
+? posts
+: posts.filter(post => post.user_id.toString() === user_id.toString())
 
-  const postsFromUsers = getPostsFromUsers(posts, user_id)
-  then postFromUsers.map
+const postsFromUsers = getPostsFromUsers(posts, user_id)
+then postFromUsers.map
 
+//Maybe create a Posts component that is rendered directly in Dashboard?
 
-  //Maybe create a Posts component that is rendered directly in Dashboard?
-
-  render() {
-    return (
-      <Posts />
-    )
-  }
-
-
-
+render() {
+return (
+<Posts />
+)
+}
 
   <div>
         <main role="main">

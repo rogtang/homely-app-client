@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
-import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
   render() {
     return (
       <div>
         <main role="main">
-          <header role="banner">
+          <header className="landing-page-header">
             <h1>Homely</h1>
             <h2>Your house hunting assistant.</h2>
           </header>
-          <section>
+          <section className='landing-intro'>
             <div className="container">
             <header>
               <h3>Focus on finding the perfect home, not the details.</h3>
@@ -26,7 +25,7 @@ class LandingPage extends Component {
             </p>
             </div>
           </section>
-          <section >
+          <section className='landing-detail'>
             <header>
               <h3>How Homely Can Help</h3>
             </header>

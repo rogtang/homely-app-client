@@ -51,7 +51,7 @@ handleClickCancel = () => {
     return (
       <div className="location-detail">
           <header className="location-item-header">
-            <h1><Link to={`/posts/${id}`}> {name}</Link></h1>
+            <h2><Link to={`/posts/${id}`}> {name}</Link></h2>
           </header>
           <section>
             <div >

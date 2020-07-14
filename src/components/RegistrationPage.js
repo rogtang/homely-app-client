@@ -71,9 +71,10 @@ updateError(error) {
       password.value = ''
       this.handleRegistrationSuccess()
       })
-     .catch(res => {
-       this.setState({ error: res.error })
-     })
+      .catch(res => {
+        this.setState({ error: res.error });
+        alert('Sorry, that email is already used. Please try a different email.')
+      })
   }
 
   validateUsername() {

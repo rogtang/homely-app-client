@@ -28,11 +28,6 @@ const AuthApiService = {
                ? res.json().then(e => {Promise.reject(e)})
                : res.json()
            )
-           .catch(error => alert(`Sorry, that email is already taken`))
-           .catch(error => {
-            this.setState({ error })
-            
-          })
        },
 }
 
