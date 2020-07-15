@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./LandingPage.css";
+import {Link } from "react-router-dom";
 
 class LandingPage extends Component {
   render() {
     return (
-      <div>
+      <div className="landing-container">
         <main role="main">
           <header className="landing-page-header">
             <h1>Homely</h1>

@@ -26,6 +26,7 @@ class Dashboard extends Component {
             key={post.id}
             id={post.id}
             name={post.name}
+            address={post.address}
             price_rating={post.price_rating}
             size_rating={post.size_rating}
             location_rating={post.location_rating}

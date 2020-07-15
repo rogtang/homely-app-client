@@ -25,14 +25,6 @@ header {
   font-size: 54px;
 }
 
-p {
-  margin: 0 auto;
-  max-width: 650px;
-}
-
-p + p {
-  margin-top: 15px;
-}
 
 form {
   text-align: left;

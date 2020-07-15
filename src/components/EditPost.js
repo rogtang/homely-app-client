@@ -130,7 +130,7 @@ class EditPost extends Component {
       <div> 
         <main role="main">
       <header>
-        <h1>Edit Location Details</h1>
+        <h1 className='edit-location-header'>Edit Location Details</h1>
       </header>
       <section className="edit-post-section">
         <form id="edit-post" onSubmit={this.handleSubmit}>

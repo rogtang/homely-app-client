@@ -49,17 +49,17 @@ handleClickCancel = () => {
     const { name, id, url, address, usernotes, price_rating, size_rating, location_rating } = this.props
 
     return (
-      <div className="location-detail">
+      <div className="location-container-detail">
           <header className="location-item-header">
-            <h2><Link to={`/posts/${id}`}> {name}</Link></h2>
+            <h2 className="location-item-name"><Link to={`/posts/${id}`}> {name}</Link></h2>
           </header>
-          <section>
-            <div >
-              <div>{address}</div>
-              <div>
+          <section className="location-item-body">
+            <div>
+              <div className="location-detail">{address}</div>
+              <div className="location-detail">
                 {usernotes}
               </div>
-              <a
+              <a 
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
