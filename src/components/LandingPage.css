@@ -51,6 +51,10 @@
     font-size: 1.2em
   }
 
+  .lp-heading {
+    font-size: 40px;
+  }
+
   .landing-intro {
     background-color: rgb(250, 239, 210);
   }

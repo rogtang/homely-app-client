@@ -117,7 +117,7 @@ updatePassword(pw) {
               <input type="submit" value="Sign In" className="login__form__btn"/>
             </div>
             <p className='test-login-credentials'>
-              To login as a test user, please use demo@demo.com and password123 to demo the site.
+              Please use demo@demo.com and password123 to demo the site.
             </p>
           </form>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
@@ -15,30 +14,6 @@ import PublicOnlyRoute from "./utils/PublicOnlyRoute";
 import PostsContext from "./contexts/PostsContext";
 import Footer from "./components/Footer";
 
-/*const newHouse = 
-  {
-      name: "the White House",
-      address: "1600 Pennslyvania Ave, Washington DC, 20500",
-      usernotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
-      url: "https://zillow.com/homes",
-      ratings: {
-          price: 1,
-          size: 5,
-          location: 4
-      }
-      }
-
-  const anotherHouse = 
-  {
-      name: "the White House",
-      address: "1600 Pennslyvania Ave, Washington DC, 20500",
-      usernotes: "Lovely exteriors, spatial front yard, but kitchens need renovation. Plenty of natural light. Spacious living areas but air conditioning will need to be replaced. Cabinets are outdated. Furniture will not be included.",
-      url: "https://zillow.com/homes",
-      price_rating: 1,
-      size_rating: 5,
-      location_rating: 4
-      }
-*/
 export const findPost = (posts = [], post_id) =>
   posts.find((post) => post.id === post_id);
 

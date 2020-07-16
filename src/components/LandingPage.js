@@ -14,7 +14,7 @@ class LandingPage extends Component {
           <section className="landing-intro">
             <div className="container">
               <header>
-                <h3>Focus on finding the perfect home, not the details.</h3>
+                <h3 className="lp-heading">Focus on finding the perfect home, not the details.</h3>
               </header>
               <br />
               <p className="landing-page one">
@@ -29,7 +29,7 @@ class LandingPage extends Component {
           </section>
           <section className="landing-detail">
             <header>
-              <h3>How Homely Can Help</h3>
+              <h3 className="lp-heading">How Homely Can Help</h3>
             </header>
             <p className="landing-page two">
               Homely helps you keep track of all the houses and apartments

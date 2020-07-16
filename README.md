@@ -1,23 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Homely
 
-## Available Scripts
+This is the repository for the Homely client.
 
-In the project directory, you can run:
+## Live Site
 
-### `npm start`
+Open [here](https://homely-app.vercel.app/) to view it in the browser.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Upon accessing the landing page for the first time, you are on the Public Route for the site and can navigate to the Login and Registration pages. To login as a test user, use username: demo@demo.com with password: password123 and you will be taken to the Private Route and the user Dashboard. NOTE: the Dashboard will only display that user's unique posts. To verify, you can logout and login with username: homelytest@homely.com with password: homely123.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
+## Screenshots
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Summary
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,7 +23,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technology Used (Client-side)
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
