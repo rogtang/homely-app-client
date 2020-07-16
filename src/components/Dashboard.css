@@ -34,7 +34,7 @@ body {
 }
 .dashboard-heading {
   margin-top: 1em;
-  font-size: 40px;
+  font-size: 44px;
   font-family: "neuton";
 }
 
@@ -55,6 +55,6 @@ body {
   }
 
   .dashboard-heading {
-    font-size: 42px;
+    font-size: 44px;
   }
 }
