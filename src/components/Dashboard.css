@@ -17,9 +17,6 @@ body {
   padding: 45px 15px 5px 15px
 }
 
-
-
-
 .Posts__list {
   font-size: 18px;
   width: 90%;
@@ -28,9 +25,16 @@ body {
   font-family: 'Crimson Text', serif; 
 }
 
+.hero-image {
+  background-image: url('../images/sf-row-houses.jpg');
+  height: 18em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
 .dashboard-heading {
-  margin-top: 2em;
-  font-size: 54px;
+  margin-top: 1em;
+  font-size: 48px;
   font-family: "neuton";
 }
 
@@ -51,7 +55,6 @@ body {
   }
 
   .dashboard-heading {
-    margin-top: 2.5em;
-    font-size: 54px;
+    font-size: 48px;
   }
 }

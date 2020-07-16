@@ -40,10 +40,6 @@ handleDelete = e => {
     window.location.assign('/posts');
 }
 
-/*moved Cancel button to LocationDetail
-handleClickCancel = () => {
-  this.props.history.push('/posts')
-}*/
 
   render() {
     const { name, id, url, address, usernotes, price_rating, size_rating, location_rating } = this.props

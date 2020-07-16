@@ -55,21 +55,6 @@ updatePassword(pw) {
   })
 }
 
-
-
-  handleSubmitBasicAuth = ev => {
-    ev.preventDefault()
-    const { username, password } = ev.target
-
-    TokenService.saveAuthToken(
-         TokenService.makeBasicAuthToken(username.value, password.value)
-         )
-
-    username.value = ''
-    password.value = ''
-    this.handleLoginSuccess()
-  }
-
   handleSubmitJwtAuth = e => {
        e.preventDefault()
        this.setState({ error: null })
@@ -113,16 +98,17 @@ updatePassword(pw) {
         <h1>Great To See You Again</h1>
         <div className="login__form">
         <form
+          id="login-id"
           className='LoginForm'
           onSubmit={this.handleSubmitJwtAuth}
           >
-            <h2>Login</h2>
+            <h2 className='login-header'>Login</h2>
             <div className="login__form__credentials">
-            <label htmlFor='LoginForm__username'>Enter your email/username:</label>
+            <label className='login_register_label' htmlFor='LoginForm__username'>Enter your email/username:</label>
               <input type="text" placeholder="Email address" name="username" id="LoginForm__username" 
               onChange={e => this.updateUsername(e.target.value)} required/> 
               {this.state.username.touched && (<ValidationError message={this.validateUsername()} />)}
-              <label htmlFor='LoginForm__password'>Enter your password:</label>
+              <label className='login_register_label' htmlFor='LoginForm__password'>Enter your password:</label>
               <input type="password" placeholder="Password" name="password" id="password"
               onChange={e => this.updatePassword(e.target.value)} required/>
               {this.state.password.touched && (<ValidationError message={this.validatePassword()} />)}
@@ -130,6 +116,9 @@ updatePassword(pw) {
             <div className="login__form__controls">
               <input type="submit" value="Sign In" className="login__form__btn"/>
             </div>
+            <p className='test-login-credentials'>
+              To login as a test user, please use demo@demo.com and password123 to demo the site.
+            </p>
           </form>
         </div>
       </div>

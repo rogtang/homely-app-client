@@ -99,10 +99,11 @@ validatePassword() {
         <h1>Welcome Homely</h1>
         <div className="register__form">
           <form
+          id="register-id"
           className='RegistrationForm'
           onSubmit={this.handleSubmit}
           >
-            <h2>Register</h2>
+            <h2 className='register-header'>Register</h2>
             <div className="register__form__credentials">
             <label htmlFor='RegistrationForm__username'>Email address: </label>
               <input type="text" placeholder="Enter your email address" name="username" id="RegistrationForm__username"

@@ -15,10 +15,11 @@ class Dashboard extends Component {
 
   render() {
     const { posts=[] } = this.context
-
+//Dashboard only renders post name, address and ratings
 
     return (
       <section className='postsMain'>
+      <div className='hero-image'></div>
       <h1 className="dashboard-heading">Your Posts</h1>
       <ul className='Posts__list' aria-live='polite'>
       {posts.map(post =>

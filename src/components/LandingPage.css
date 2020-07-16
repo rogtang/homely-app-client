@@ -22,6 +22,11 @@
     font-size: 2em
   }
 
+  h3 {
+    font-family: 'neuton';
+    font-size: 1.5em
+  }
+
   .landing-container {
     margin-bottom: 3em;
   }

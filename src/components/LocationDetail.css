@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
 .postDetail {
     margin-bottom: 5em;
+    font-family: 'Crimson Text', serif; 
+    font-size: 20px;
 }
