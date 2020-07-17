@@ -27,7 +27,7 @@ body {
 
 .hero-image {
   background-image: url("../images/sf-row-houses.jpg");
-  height: 18em;
+  height: 14em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -56,5 +56,9 @@ body {
 
   .dashboard-heading {
     font-size: 44px;
+  }
+
+  .hero-image {
+    height: 18em;
   }
 }

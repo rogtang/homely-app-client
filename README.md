@@ -1,64 +1,31 @@
 # Homely
 
-This is the repository for the Homely client.
+## Summary
+
+Research indicates the average buyer will visit 10 houses
+over 10 weeks before finding the right place. Homely helps you keep track of all the houses and apartments
+you've visited. Quickly create a post for each place, assign it an
+alias as a handy reference, and make notes on your initial
+impressions and potential renovation ideas before you visit the
+next place and forget. Find out the description in the listing
+doesn't match reality? Jot it down.
 
 ## Live Site
 
-Open [here](https://homely-app.vercel.app/) to view it in the browser.
+[Link](https://homely-app.vercel.app/) to view it in the browser.
+[Link](https://github.com/rogtang/homely-app-api) to view the API.
 
-Upon accessing the landing page for the first time, you are on the Public Route for the site and can navigate to the Login and Registration pages. To login as a test user, use username: demo@demo.com with password: password123 and you will be taken to the Private Route and the user Dashboard. NOTE: the Dashboard will only display that user's unique posts. To verify, you can logout and login with username: homelytest@homely.com with password: homely123.
+Upon accessing the landing page for the first time, you are on the Public Route for the site and can navigate to the Login and Registration pages. To login as a test user, use username: demo@demo.com with password: password123 and you will be taken to the Private Route and the user Dashboard. NOTE: the Dashboard will only display that specific user's posts. To verify, you can logout and login with username: homelytest@homely.com with password: homely123 or register a new account.
 
 ## Screenshots
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Landing page](src/screenshots/homely_landing_page_register_small.png)
+![Dashboard](src/screenshots/homely_dashboard_small.png)
+![User Post](src/screenshots/homely_postdetails.png)
+![Add Post](src/screenshots/homely_addpost_small.png)
 
-## Summary
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Technology Used (Client-side)
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Built With (Client-side):
+- React.js
+- JSX
+- CSS
+- Jest (Testing)
