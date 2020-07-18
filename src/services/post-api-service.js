@@ -59,6 +59,9 @@ const PostApiService = {
       .then((data) => {
         cb(post_id);
       })
+      .then(() =>
+      window.location.assign("/posts")
+    )
       .catch((error) => {
         console.error(error);
       });

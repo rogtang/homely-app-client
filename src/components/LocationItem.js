@@ -33,9 +33,7 @@ class LocationItem extends Component {
     e.preventDefault();
     const { id } = e.target;
     //const postId = Number(id)
-    PostApiService.deletePost(id, this.postToDelete(id)).then(() =>
-      window.location.assign("/posts")
-    );
+    PostApiService.deletePost(id, this.postToDelete(id))
   };
 
   render() {
