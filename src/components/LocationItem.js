@@ -22,9 +22,7 @@ class LocationItem extends Component {
     this.setState({
         posts: newPosts
     });
-    window.location.assign('/posts');
     window.location.assign('/posts')
-    
 };
 
 componentDidMount() {
