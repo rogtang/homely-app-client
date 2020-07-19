@@ -46,6 +46,7 @@ const PostApiService = {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
+      mode: 'cors'
     })
       .then(res => {
         if (!res.ok) {
