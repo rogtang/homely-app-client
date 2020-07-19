@@ -46,14 +46,14 @@ class App extends React.Component {
     });
   };
 
-  /*deletePost = postId => {
+  deletePost = postId => {
     const newPosts = this.state.posts.filter(post =>
       post.id !== postId
     )
     this.setState({
       posts: newPosts
     })
-  }*/
+  }
 
   componentDidMount() {
     PostApiService.getPosts()
@@ -69,7 +69,6 @@ class App extends React.Component {
       updatePost: this.updatePost,
     };
 
-    console.log(value);
 
     return (
       <PostsContext.Provider value={value}>
@@ -86,7 +85,7 @@ class App extends React.Component {
                 path={"/register"}
                 component={RegistrationPage}
               />
-              <PrivateRoute exact path={"/posts"} component={Dashboard} />
+              <PrivateRoute exact path={"/posts"} component={Dashboard}/>
               <PrivateRoute
                 exact
                 path={"/posts/:post_id"}

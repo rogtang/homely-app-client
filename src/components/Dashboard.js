@@ -14,7 +14,7 @@ class Dashboard extends Component {
   
 
   render() {
-    const { posts=[] } = this.context
+    const { posts=[]} = this.context
 //Dashboard only renders post name, address and ratings
 
     return (

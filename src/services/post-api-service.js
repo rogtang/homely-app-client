@@ -39,8 +39,8 @@ const PostApiService = {
       )
   },
 
-  deletePost(post_id, cb) {
-    fetch(`${config.API_ENDPOINT}/posts/${post_id}`, {
+  deletePost(post_id) {
+    return fetch(`${config.API_ENDPOINT}/posts/${post_id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
@@ -50,15 +50,10 @@ const PostApiService = {
     })
       .then(res => {
         if (!res.ok) {
-          console.log(res) 
           return res.json().then(error => Promise.reject(error))
         }
         return res.json()
       })
-      .then(data => {
-        cb(post_id)
-      })
-      //.then(()=> window.location.assign('/posts'))
       .catch(error => {
         console.error(error)
       })

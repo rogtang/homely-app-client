@@ -15,7 +15,7 @@ class LocationItem extends Component {
     posts: []
 };
 
-  postToDelete = (postId) => {
+  /*postToDelete = (postId) => {
     const newPosts = this.state.posts.filter((post) => {
       return parseInt(post.id) !== parseInt(postId)
     });
@@ -23,7 +23,7 @@ class LocationItem extends Component {
         posts: newPosts
     });
     window.location.assign('/posts')
-};
+};*/
 
 componentDidMount() {
   PostApiService.getPosts()
@@ -37,7 +37,8 @@ handleDelete = e => {
   e.preventDefault()
   const { id } = e.target
   //const postId = Number(id)
-  PostApiService.deletePost(id, this.postToDelete(id))
+  PostApiService.deletePost(id)
+  .then(data => this.context.deletePost(+id))
 }
 
 
